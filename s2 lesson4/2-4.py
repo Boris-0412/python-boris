@@ -8,8 +8,8 @@ window = Window()
 class Cell(Sprite):
 
     def on_create(self):
-        self.width = 20
-        self.height = 20
+        self.width = 40
+        self.height = 40
        
 
     def make_label(self, value, min, max):
@@ -31,8 +31,8 @@ for i in range(10):
     my_list.append([random.randint(0,100) for j in range(20)])
 
 min_val = max_val = my_list[1][0]
-for i in range(3):
-    for j in range(4):
+for i in range(len(my_list)):
+    for j in range(len(my_list[i])):
         v = my_list[i][j]
         if min_val > v:
             min_val = v
@@ -43,8 +43,8 @@ for i in range(len(my_list)):
     for j in range(len(my_list[i])):
        cell = window.create_sprite(Cell)
     #    cell = str(my_list[i][j])
-       cell.x = 500 + (cell.width + 10)*j
-       cell.y = 400 - (cell.height + 10)*i
+       cell.x = 350 + (cell.width + 1)*j
+       cell.y = 500 - (cell.height + 1)*i
        cell.make_label(my_list[i][j], min_val, max_val)
        
 
