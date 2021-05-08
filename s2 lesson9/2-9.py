@@ -62,6 +62,8 @@ class CheckButton(Sprite):
         else:            
             self.guess += 1
             make_new_guess(self.guess)
+            self.red_pegs = 0
+            self.white_pegs = 0
 
 def make_new_guess(guess):
     guess_list.clear()
