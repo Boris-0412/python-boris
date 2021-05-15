@@ -1,7 +1,6 @@
 from enum import Enum
 from pycat.base.color import Color
 from pycat.core import Window, Scheduler, Label
-from pycat.geometry import point
 from pycat.sprite import Sprite
 from random import randint, choice
 from os import path
@@ -15,12 +14,8 @@ animals_file = folder+"/animals.txt"
 lines = get_data(sports_file)
 print(lines)
     
-
-# sports =[]
 sports = get_data(sports_file)
-# cars = ['']
 cars = get_data(cars_file)
-# animals = ['']
 animals = get_data(animals_file)
 words = sports + cars + animals
 
